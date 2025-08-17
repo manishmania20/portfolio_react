@@ -1,8 +1,8 @@
 const selectOptions = [
-	'Web Application',
-	'Mobile Application',
-	'UI/UX Design',
-	'Branding',
+	'DevOps Engineer',
+	'SRE Engineer',
+	'Cloud Engineer',
+	// 'Branding',
 ];
 
 function ProjectsFilter({ setSelectProject }) {
