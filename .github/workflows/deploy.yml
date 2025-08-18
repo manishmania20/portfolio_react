@@ -24,8 +24,8 @@ jobs:
       - name: Run build
         run: npm run build
 
-      - name: Export static site
-        run: npm run export
+      # - name: Export static site
+      #   run: npm run export
 
       # OPTIONAL: Deploy to Vercel via CLI
       - name: Deploy to Vercel
