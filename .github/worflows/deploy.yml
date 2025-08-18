@@ -1,0 +1,34 @@
+name: CI/CD Pipeline for Portfolio
+
+on:
+  push:
+    branches:
+      - main   # Trigger workflow on pushes to main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build
+        run: npm run build
+
+      - name: Export static site
+        run: npm run export
+
+      # OPTIONAL: Deploy to Vercel via CLI
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod --yes
