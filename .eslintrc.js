@@ -1,0 +1,35 @@
+module.exports = {
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
+		jest: true,
+	},
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		'plugin:jest/recommended',
+		'airbnb',
+	],
+	parserOptions: {
+		ecmaFeatures: {
+			jsx: true,
+		},
+		ecmaVersion: 13,
+		sourceType: 'module',
+	},
+	plugins: [
+		'react', 'jest',
+	],
+	rules: {
+		'no-tabs': 'off',
+		indent: ['error', 'tab'],
+		'import/no-extraneous-dependencies': [
+			'error',
+			{ devDependencies: ['tailwind.config.js', 'postcss.config.js', '**/*.test.js'] },
+		],
+		'import/prefer-default-export': 'off',
+		'react/react-in-jsx-scope': 'off',
+		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+	},
+};
