@@ -31,8 +31,10 @@ module.exports = {
 		'import/prefer-default-export': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
-		'react/jsx-indent': ['warn', 2],
-		'react/jsx-indent-props': ['warn', 2],
+		'react/jsx-indent': 'off',
+		'react/jsx-indent-props': 'off',
+		'react/jsx-closing-bracket-location': 'off',
+		'react/props-type': 'off',
 		'react/button-has-type': 'warn',
 	},
 };
