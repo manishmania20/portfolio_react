@@ -36,5 +36,7 @@ module.exports = {
 		'react/jsx-closing-bracket-location': 'off',
 		'react/props-type': 'off',
 		'react/button-has-type': 'warn',
+		'react/no-unescaped-entities': 'off',
+		'@next/next/no-page-custom-font': 'off',
 	},
 };
