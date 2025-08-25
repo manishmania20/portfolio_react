@@ -21,7 +21,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+      - name: Lint
+        run: npx eslint . || true
       - name: Run build
         run: npm run build
 
