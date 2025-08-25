@@ -1,7 +1,7 @@
-import { v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from 'uuid';
 
 // Import images
-import BallImage from "../public/images/brands/ball_gray.jpg";
+import BallImage from '../public/images/brands/ball_gray.jpg';
 // import SonyImage from '../public/images/brands/sony_gray.png';
 // import AdidasImage from '../public/images/brands/adidas_gray.png';
 // import FilaImage from '../public/images/brands/fila_gray.png';
@@ -10,12 +10,12 @@ import BallImage from "../public/images/brands/ball_gray.jpg";
 // import CanonImage from '../public/images/brands/canon_gray.png';
 // import PumaImage from '../public/images/brands/puma_gray.png';
 
-export const clientsHeading = "Some of the brands I worked with";
+export const clientsHeading = 'Some of the brands I worked with';
 
 export const clientsData = [
   {
     id: uuidv4(),
-    title: "Ball",
+    title: 'Ball',
     img: BallImage,
   },
   // {
