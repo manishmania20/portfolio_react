@@ -2,7 +2,9 @@ function AppFooterCopyright() {
   return (
     <div className="font-general-regular flex justify-center items-center text-center">
       <div className="text-lg text-ternary-dark dark:text-ternary-light">
-        &copy; {new Date().getFullYear()}
+        &copy; 
+{' '}
+{new Date().getFullYear()}
         <a
           href="https://github.com/realstoman/nextjs-tailwindcss-portfolio"
           target="__blank"
@@ -10,7 +12,7 @@ function AppFooterCopyright() {
         >
           Next.js & Tailwind CSS Portfolio
         </a>
-        .{" "}
+        .{' '}
         <a
           href="https://stoman.me"
           target="__blank"
