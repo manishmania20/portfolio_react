@@ -1,4 +1,6 @@
+// .eslintrc.js
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
@@ -6,43 +8,47 @@ module.exports = {
     jest: true,
   },
   extends: [
-    "plugin:prettier/recommended",
-    "plugin:react/recommended",
+    "next/core-web-vitals",
     "plugin:jest/recommended",
-    "airbnb",
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended", // turns off formatting rules; uses Prettier
   ],
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 13,
+    ecmaFeatures: { jsx: true },
+    ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "jest"],
+  settings: {
+    react: { version: "detect" },
+  },
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/", "coverage/"],
+  plugins: ["jest"],
   rules: {
-    quotes: ["error", "double"],
-    indent: ["error", 2],
+    // Formatting handled by Prettier
+    indent: "off",
+    quotes: "off",
     "no-tabs": "off",
+    "react/jsx-indent": "off",
+    "react/jsx-indent-props": "off",
+
+    // Custom rules
+    "react/prop-types": "off",
+    "import/prefer-default-export": "off",
+
+    // Allow dev dependencies in test files
     "import/no-extraneous-dependencies": [
       "error",
       {
         devDependencies: [
+          "**/__tests__/**",
+          "**/*.test.*",
+          "**/*.spec.*",
+          "jest.config.js",
+          "jest.setup.js",
           "tailwind.config.js",
           "postcss.config.js",
-          "**/*.test.js",
-          "jest.setup.js",
         ],
       },
     ],
-    "import/prefer-default-export": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
-    "react/jsx-indent": "off",
-    "react/jsx-indent-props": "off",
-    "react/jsx-closing-bracket-location": "off",
-    "react/prop-type": "off",
-    "react/button-has-type": "warn",
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off",
   },
 };
