@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import ContactDetails from "../components/contact/ContactDetails";
-import ContactForm from "../components/contact/ContactForm";
-import PagesMetaHead from "../components/PagesMetaHead";
+import { motion } from 'framer-motion';
+import ContactDetails from '../components/contact/ContactDetails';
+import ContactForm from '../components/contact/ContactForm';
+import PagesMetaHead from '../components/PagesMetaHead';
 
 function contact() {
   return (
@@ -12,7 +12,7 @@ function contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          ease: "easeInOut",
+          ease: 'easeInOut',
           duration: 0.5,
           delay: 0.1,
         }}

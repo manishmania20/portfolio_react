@@ -1,13 +1,13 @@
-import { useState, useEffect } from "react";
-import { FiChevronUp } from "react-icons/fi";
+import { useState, useEffect } from 'react';
+import { FiChevronUp } from 'react-icons/fi';
 
 function useScrollToTop() {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", scrollToTop);
+    window.addEventListener('scroll', scrollToTop);
     return function cleanup() {
-      window.removeEventListener("scroll", scrollToTop);
+      window.removeEventListener('scroll', scrollToTop);
     };
   });
 
@@ -22,12 +22,12 @@ function useScrollToTop() {
   const backToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", scrollToTop);
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', scrollToTop);
   }
 
   return (
@@ -41,7 +41,7 @@ function useScrollToTop() {
         borderRadius: 50,
         right: 50,
         bottom: 50,
-        display: showScroll ? "flex" : "none",
+        display: showScroll ? 'flex' : 'none',
       }}
     />
   );

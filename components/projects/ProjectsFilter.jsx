@@ -1,7 +1,7 @@
 const selectOptions = [
-  "DevOps Engineer",
-  "SRE Engineer",
-  "Cloud Engineer",
+  'DevOps Engineer',
+  'SRE Engineer',
+  'Cloud Engineer',
   // 'Branding',
 ];
 

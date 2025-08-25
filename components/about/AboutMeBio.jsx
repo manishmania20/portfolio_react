@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { useState } from "react";
-import { aboutMeData } from "../../data/aboutMeData";
+import Image from 'next/image';
+import { useState } from 'react';
+import { aboutMeData } from '../../data/aboutMeData';
 
 function AboutMeBio() {
   const [aboutMe, setAboutMe] = useState(aboutMeData);
@@ -18,10 +18,7 @@ function AboutMeBio() {
 
       <div className="font-general-regular w-full sm:w-3/4 text-left">
         {aboutMe.map((bio) => (
-          <p
-            className="mb-4 text-ternary-dark dark:text-ternary-light text-lg"
-            key={bio.id}
-          >
+          <p className="mb-4 text-ternary-dark dark:text-ternary-light text-lg" key={bio.id}>
             {bio.bio}
           </p>
         ))}

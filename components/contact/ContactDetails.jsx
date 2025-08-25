@@ -1,19 +1,19 @@
-import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
+import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
 
 const contacts = [
   {
     id: 1,
-    name: "Kharghar, Mumbai, India",
+    name: 'Kharghar, Mumbai, India',
     icon: <FiMapPin />,
   },
   {
     id: 2,
-    name: "iammanishk98@outlook.com",
+    name: 'iammanishk98@outlook.com',
     icon: <FiMail />,
   },
   {
     id: 3,
-    name: "+91 702 1255 880",
+    name: '+91 702 1255 880',
     icon: <FiPhone />,
   },
 ];

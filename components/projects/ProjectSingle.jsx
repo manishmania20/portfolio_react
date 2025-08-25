@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const imageStyle = { maxWidth: "100%", height: "auto" };
+const imageStyle = { maxWidth: '100%', height: 'auto' };
 
 function ProjectSingle(props) {
   return (
@@ -10,17 +10,12 @@ function ProjectSingle(props) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, delay: 1 }}
       transition={{
-        ease: "easeInOut",
+        ease: 'easeInOut',
         duration: 0.7,
         delay: 0.15,
       }}
     >
-      <Link
-        href="/projects/[id]"
-        as={`/projects/${props.id}`}
-        aria-label="Single Project"
-        passHref
-      >
+      <Link href="/projects/[id]" as={`/projects/${props.id}`} aria-label="Single Project" passHref>
         <div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-light dark:bg-ternary-dark">
           <div>
             <Image

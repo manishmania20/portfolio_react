@@ -1,32 +1,26 @@
-import {
-  FiGithub,
-  FiTwitter,
-  FiLinkedin,
-  FiGlobe,
-  FiYoutube,
-} from "react-icons/fi";
-import AppFooterCopyright from "./AppFooterCopyright";
+import { FiGithub, FiTwitter, FiLinkedin, FiGlobe, FiYoutube } from 'react-icons/fi';
+import AppFooterCopyright from './AppFooterCopyright';
 
 const socialLinks = [
   {
     id: 1,
     icon: <FiGlobe />,
-    url: "https://www.stoman.me/",
+    url: 'https://www.stoman.me/',
   },
   {
     id: 2,
     icon: <FiGithub />,
-    url: "https://github.com/manishmania20",
+    url: 'https://github.com/manishmania20',
   },
   {
     id: 3,
     icon: <FiTwitter />,
-    url: "https://x.com/Manny0398",
+    url: 'https://x.com/Manny0398',
   },
   {
     id: 4,
     icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/manish-kumar-6a9532152/",
+    url: 'https://www.linkedin.com/in/manish-kumar-6a9532152/',
   },
   // {
   // 	id: 5,

@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { clientsData, clientsHeading } from "../../data/clientsData";
+import { useState } from 'react';
+import { clientsData, clientsHeading } from '../../data/clientsData';
 
-import AboutClientSingle from "./AboutClientSingle";
+import AboutClientSingle from './AboutClientSingle';
 
 function AboutClients() {
   const [clients, setClients] = useState(clientsData);
@@ -12,11 +12,7 @@ function AboutClients() {
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-4 mt-10 sm:mt-14 gap-2">
         {clients.map((client) => (
-          <AboutClientSingle
-            title={client.title}
-            image={client.img}
-            key={client.id}
-          />
+          <AboutClientSingle title={client.title} image={client.img} key={client.id} />
         ))}
       </div>
     </div>

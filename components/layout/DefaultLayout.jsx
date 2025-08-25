@@ -1,6 +1,6 @@
-import AppHeader from "../shared/AppHeader";
-import AppFooter from "../shared/AppFooter";
-import PagesMetaHead from "../PagesMetaHead";
+import AppHeader from '../shared/AppHeader';
+import AppFooter from '../shared/AppFooter';
+import PagesMetaHead from '../PagesMetaHead';
 
 function DefaultLayout({ children }) {
   return (

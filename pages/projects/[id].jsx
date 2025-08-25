@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { FiClock, FiTag } from "react-icons/fi";
-import PagesMetaHead from "../../components/PagesMetaHead";
-import { projectsData } from "../../data/projectsData";
-import RelatedProjects from "../../components/projects/RelatedProjects";
+import Image from 'next/image';
+import { FiClock, FiTag } from 'react-icons/fi';
+import PagesMetaHead from '../../components/PagesMetaHead';
+import { projectsData } from '../../data/projectsData';
+import RelatedProjects from '../../components/projects/RelatedProjects';
 
 function ProjectSingle(props) {
   return (
@@ -62,12 +62,12 @@ function ProjectSingle(props) {
                   key={info.id}
                 >
                   <span>{info.title}: </span>
-									<a
-										href="https://stoman.me"
+                  <a
+                    href="https://stoman.me"
                     className={
-                      info.title === "Website" || info.title === "Phone"
-                        ? "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                        : ""
+                      info.title === 'Website' || info.title === 'Phone'
+                        ? 'hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300'
+                        : ''
                     }
                     aria-label="Project Website and Phone"
                   >
@@ -94,7 +94,7 @@ function ProjectSingle(props) {
               {props.project.ProjectInfo.Technologies[0].title}
             </p>
             <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-              {props.project.ProjectInfo.Technologies[0].techs.join(", ")}
+              {props.project.ProjectInfo.Technologies[0].techs.join(', ')}
             </p>
           </div>
 

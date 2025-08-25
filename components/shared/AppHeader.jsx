@@ -1,12 +1,12 @@
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { FiSun, FiMoon, FiX, FiMenu } from "react-icons/fi";
-import HireMeModal from "../HireMeModal";
-import logoLight from "../../public/images/logo-light.svg";
-import logoDark from "../../public/images/logo-dark.svg";
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+import { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { FiSun, FiMoon, FiX, FiMenu } from 'react-icons/fi';
+import HireMeModal from '../HireMeModal';
+import logoLight from '../../public/images/logo-light.svg';
+import logoDark from '../../public/images/logo-dark.svg';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppHeader() {
   const [showMenu, setShowMenu] = useState(false);
@@ -23,14 +23,10 @@ function AppHeader() {
 
   function showHireMeModal() {
     if (!showModal) {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.add("overflow-y-hidden");
+      document.getElementsByTagName('html')[0].classList.add('overflow-y-hidden');
       setShowModal(true);
     } else {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.remove("overflow-y-hidden");
+      document.getElementsByTagName('html')[0].classList.remove('overflow-y-hidden');
       setShowModal(false);
     }
   }
@@ -48,7 +44,7 @@ function AppHeader() {
         <div className="flex justify-between items-center px-4 sm:px-0">
           <div>
             <Link href="/">
-              {activeTheme === "dark" ? (
+              {activeTheme === 'dark' ? (
                 <Image
                   src={logoDark}
                   className="w-36 cursor-pointer"
@@ -74,7 +70,7 @@ function AppHeader() {
             aria-label="Theme Switcher"
             className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
+            {activeTheme === 'dark' ? (
               <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -94,11 +90,7 @@ function AppHeader() {
                 viewBox="0 0 24 24"
                 className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
               >
-                {showMenu ? (
-                  <FiX className="text-3xl" />
-                ) : (
-                  <FiMenu className="text-3xl" />
-                )}
+                {showMenu ? <FiX className="text-3xl" /> : <FiMenu className="text-3xl" />}
               </svg>
             </button>
           </div>
@@ -108,8 +100,8 @@ function AppHeader() {
         <div
           className={
             showMenu
-              ? "block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none"
-              : "hidden"
+              ? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
+              : 'hidden'
           }
         >
           <div className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
@@ -179,7 +171,7 @@ function AppHeader() {
             aria-label="Theme Switcher"
             className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
+            {activeTheme === 'dark' ? (
               <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
             ) : (
               <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -188,9 +180,7 @@ function AppHeader() {
         </div>
       </div>
       <div>
-        {showModal ? (
-          <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
-        ) : null}
+        {showModal ? <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} /> : null}
         {showModal ? showHireMeModal : null}
       </div>
     </motion.nav>

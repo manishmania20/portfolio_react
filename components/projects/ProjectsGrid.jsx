@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import ProjectSingle from "./ProjectSingle";
-import { projectsData } from "../../data/projectsData";
-import ProjectsFilter from "./ProjectsFilter";
+import { useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
+import ProjectSingle from './ProjectSingle';
+import { projectsData } from '../../data/projectsData';
+import ProjectsFilter from './ProjectsFilter';
 
 function ProjectsGrid() {
   const [searchProject, setSearchProject] = useState();
@@ -21,8 +21,7 @@ function ProjectsGrid() {
   // });
 
   const selectProjectsByCategory = projectsData.filter((item) => {
-    const category =
-      item.category.charAt(0).toUpperCase() + item.category.slice(1);
+    const category = item.category.charAt(0).toUpperCase() + item.category.slice(1);
     return category.includes(selectProject);
   });
 
@@ -111,9 +110,7 @@ function ProjectsGrid() {
           ? selectProjectsByCategory.map((project, index) => (
               <ProjectSingle key={index} {...project} />
             ))
-          : projectsData.map((project, index) => (
-              <ProjectSingle key={index} {...project} />
-            ))}
+          : projectsData.map((project, index) => <ProjectSingle key={index} {...project} />)}
       </div>
     </section>
   );

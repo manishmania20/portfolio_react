@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import Image from "next/image";
-import { FiArrowDownCircle } from "react-icons/fi";
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { FiArrowDownCircle } from 'react-icons/fi';
+import useThemeSwitcher from '../../hooks/useThemeSwitcher';
 
 function AppBanner() {
   const [activeTheme] = useThemeSwitcher();
@@ -10,7 +10,7 @@ function AppBanner() {
     <motion.section
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
+      transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
       className="flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-2"
     >
       <div className="w-full md:w-1/3 text-left">
@@ -18,7 +18,7 @@ function AppBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: "easeInOut",
+            ease: 'easeInOut',
             duration: 0.9,
             delay: 0.1,
           }}
@@ -30,7 +30,7 @@ function AppBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: "easeInOut",
+            ease: 'easeInOut',
             duration: 0.9,
             delay: 0.2,
           }}
@@ -42,7 +42,7 @@ function AppBanner() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
-            ease: "easeInOut",
+            ease: 'easeInOut',
             duration: 0.9,
             delay: 0.3,
           }}
@@ -62,16 +62,12 @@ function AppBanner() {
       <motion.div
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
+        transition={{ ease: 'easeInOut', duration: 0.9, delay: 0.2 }}
         className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
       >
         <img
           layout="responsive"
-          src={
-            activeTheme === "dark"
-              ? "/images/developer.svg"
-              : "/images/developer-dark.svg"
-          }
+          src={activeTheme === 'dark' ? '/images/developer.svg' : '/images/developer-dark.svg'}
           alt="Developer"
         />
       </motion.div>
