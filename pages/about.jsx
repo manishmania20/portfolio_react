@@ -6,34 +6,34 @@ import PagesMetaHead from '../components/PagesMetaHead';
 
 function about() {
 	return (
-		<div>
-			<PagesMetaHead title="About Me" />
+  <div>
+  <PagesMetaHead title="About Me" />
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
+  <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1, delay: 1 }}
+  exit={{ opacity: 0 }}
+  className="container mx-auto"
 			>
-				<AboutMeBio />
+  <AboutMeBio />
 			</motion.div>
 
-			{/** Counter without paddings */}
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
+  {/** Counter without paddings */}
+  <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1, delay: 1 }}
+  exit={{ opacity: 0 }}
 			>
-				<AboutCounter />
+  <AboutCounter />
 			</motion.div>
 
-			<motion.div
-				initial={{ opacity: 0 }}
-				animate={{ opacity: 1, delay: 1 }}
-				exit={{ opacity: 0 }}
-				className="container mx-auto"
+  <motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1, delay: 1 }}
+  exit={{ opacity: 0 }}
+  className="container mx-auto"
 			>
-				<AboutClients />
+  <AboutClients />
 			</motion.div>
 		</div>
 	);

@@ -26,10 +26,13 @@ module.exports = {
 		indent: ['error', 'tab'],
 		'import/no-extraneous-dependencies': [
 			'error',
-			{ devDependencies: ['tailwind.config.js', 'postcss.config.js', '**/*.test.js'] },
+			{ devDependencies: ['tailwind.config.js', 'postcss.config.js', '**/*.test.js', 'jest.setup.js'] },
 		],
 		'import/prefer-default-export': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+		'react/jsx-indent': ['warn', 2],
+		'react/jsx-indent-props': ['warn', 2],
+		'react/button-has-type': 'warn',
 	},
 };
