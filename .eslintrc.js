@@ -6,11 +6,10 @@ module.exports = {
 		jest: true,
 	},
 	extends: [
-		"eslint:recommended",
+		"plugin:prettier/recommended",
 		"plugin:react/recommended",
 		"plugin:jest/recommended",
 		"airbnb",
-		"prettier",
 	],
 	parserOptions: {
 		ecmaFeatures: {
