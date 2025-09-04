@@ -50,7 +50,7 @@ jobs:
       - name: Push Docker Image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio:latest
 
-      # OPTIONAL: Deploy to the Vercel via CLI
+      # OPTIONAL: Deploy to Vercel via CLI
       - name: Deploy to Vercel
         run: |
           npm install -g vercel
